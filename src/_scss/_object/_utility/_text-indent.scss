@@ -1,0 +1,20 @@
+/* ==========================================================================
+ text-indent
+========================================================================== */
+
+.u-tx-inside0 {
+  text-indent: 0 !important;
+  padding-left: 0 !important;
+}
+@for $value from 8 to 21 {
+	.u-tx-inside#{$value} {
+		text-indent: -($value / 10) + em !important;
+		padding-left: ($value / 10) + em !important;
+	}
+}
+@for $value from 8 to 21 {
+	.u-tx-insideW#{$value} {
+		text-indent: -((($value / 10) * 3) - .4) + em !important;
+		padding-left: (($value / 10) * 3) + em !important;
+	}
+}

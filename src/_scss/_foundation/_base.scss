@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* ==========================================================================
+ Base
+========================================================================== */
+html {
+	overflow-y:scroll;
+	font-size:0.625em;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-family:'メイリオ',Meiryo,'ＭＳ Ｐゴシック','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','Osaka',Arial,Helvetica,sans-serif;
+	line-height:1.4;
+	background:#fff;
+	-webkit-text-size-adjust: 100%;
+	font-size:1.6rem;
+	font-weight: var(--fw-regular);
+	color:var(--clr-black);
+	font-feature-settings : 'palt';
+}
+
+input, button, textarea, select {
+	font-family:'メイリオ',Meiryo,'ＭＳ Ｐゴシック','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','Osaka',Arial,Helvetica,sans-serif;
+}
+
+img{
+	vertical-align:top;
+  max-width: 100%;
+	width: auto;
+  height: auto;
+	-webkit-user-drag: none;
+  user-drag: none;
+}
+canvas{
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+
+a,button {
+  transition: color var(--cubic), opacity var(--cubic), background-color var(--cubic);
+	color: var(--clr-link);
+	text-decoration: none;
+	cursor: pointer;
+	&:active,
+	&:hover {
+		opacity: .8
+	}
+}
+
+sup,
+sub{
+	font-size: .6em;
+}
+sup{
+	vertical-align: top;
+}
+sub{
+	vertical-align: bottom;
+}
+
+/* Google Chrome, Safari, Opera 15+, Android, iOS */
+::-webkit-input-placeholder {
+    color: var(--clr-weak);
+}
+/* Firefox 18- */
+:-moz-placeholder {
+    color: var(--clr-weak);
+}
+/* Firefox 19+ */
+::-moz-placeholder {
+    color: var(--clr-weak);
+}
+/* IE 10+ */
+:-ms-input-placeholder {
+    color: var(--clr-weak);
+}
+:placeholder-shown {
+    color: var(--clr-weak);
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+    -moz-appearance:textfield;
+}

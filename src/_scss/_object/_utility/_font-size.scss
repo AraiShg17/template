@@ -1,0 +1,17 @@
+/* ==========================================================================
+ font-size
+========================================================================== */
+@for $value from 1 to 10 {
+	.u-fz-#{$value * 2 + 8} {
+		font-size: (2rem * $value + 8) / 10 !important;
+	}
+}
+
+
+@media screen and (max-width: $break-point-sp) {
+	@for $value from 1 to 10 {
+    .u-fz-sp-#{$value * 2 + 8} {
+        font-size: (2rem * $value + 8) / 10 !important;
+    }
+	}
+}

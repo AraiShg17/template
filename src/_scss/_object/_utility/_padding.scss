@@ -1,0 +1,61 @@
+/* ==========================================================================
+ padding
+========================================================================== */
+/* Top padding */
+@for $value from 1 to 20 {
+    .u-pt-#{$value * $base-size - $base-size} {
+        padding-top: $base-size * $value - $base-size + px !important;
+    }
+}
+
+/* Right padding */
+@for $value from 1 to 20 {
+    .u-pr-#{$value * $base-size - $base-size} {
+        padding-right: $base-size * $value - $base-size + px !important;
+    }
+}
+
+/* Bottom padding */
+@for $value from 1 to 20 {
+    .u-pb-#{$value * $base-size - $base-size} {
+        padding-bottom: $base-size * $value - $base-size + px !important;
+    }
+}
+
+/* Left padding */
+@for $value from 1 to 20 {
+    .u-pl-#{$value * $base-size - $base-size} {
+        padding-left: $base-size * $value - $base-size + px !important;
+    }
+}
+
+
+@media screen and (max-width: $break-point-sp) {
+	/* Top padding */
+	@for $value from 1 to 20 {
+			.u-pt-sp-#{$value * $base-size - $base-size} {
+					padding-top: $base-size * $value - $base-size + px !important;
+			}
+	}
+
+	/* Right padding */
+	@for $value from 1 to 20 {
+			.u-pr-sp-#{$value * $base-size - $base-size} {
+					padding-right: $base-size * $value - $base-size + px !important;
+			}
+	}
+
+	/* Bottom padding */
+	@for $value from 1 to 20 {
+			.u-pb-sp-#{$value * $base-size - $base-size} {
+					padding-bottom: $base-size * $value - $base-size + px !important;
+			}
+	}
+
+	/* Left padding */
+	@for $value from 1 to 20 {
+			.u-pl-sp-#{$value * $base-size - $base-size} {
+					padding-left: $base-size * $value - $base-size + px !important;
+			}
+	}
+}

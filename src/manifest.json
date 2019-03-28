@@ -1,0 +1,12 @@
+{
+  "lang": "ja",
+  "name": "sample",
+  "short_name": "sample",
+  "icons": [{
+    "src": "/app-icon.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }],
+  "start_url": "https://www.sample.com/",
+  "display": "standalone"
+}

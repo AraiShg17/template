@@ -1,0 +1,30 @@
+/* ==========================================================================
+ text-align
+========================================================================== */
+.u-ta-l {
+    text-align: left !important;
+}
+
+.u-ta-c {
+    text-align: center !important;
+}
+
+.u-ta-r {
+    text-align: right !important;
+}
+
+@media screen and (max-width: $break-point-sp) {
+	
+	.u-ta-l-sp {
+    text-align: left !important;
+	}
+
+	.u-ta-c-sp {
+			text-align: center !important;
+	}
+
+	.u-ta-r-sp {
+			text-align: right !important;
+	}
+	
+}

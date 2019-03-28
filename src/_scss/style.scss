@@ -1,0 +1,65 @@
+/* ==========================================================================
+ Foundation
+========================================================================== */
+@import "_foundation/_mixin";
+@import "_foundation/_variable";
+@import "_foundation/_reset";
+@import "_foundation/_webfont";
+@import "_foundation/_base";
+
+/* ==========================================================================
+ Layout
+========================================================================== */
+@import "_layout/_wrapper";
+@import "_layout/_header";
+@import "_layout/_nav";
+@import "_layout/_main";
+@import "_layout/_footer";
+
+/* ==========================================================================
+ Object
+========================================================================== */
+
+/* -----------------------------------------------------------------
+ Component
+----------------------------------------------------------------- */
+//全プロジェクトで共通で使えるスタイル
+@import "_object/_component/_keyframe";
+
+/* -----------------------------------------------------------------
+ Project
+----------------------------------------------------------------- */
+//プロジェクト固有のスタイル
+@import "_object/_project/_title";
+
+/* -----------------------------------------------------------------
+ Utility
+----------------------------------------------------------------- */
+//汎用クラス ほとんどの場合で単一のスタイルを指定 確実にスタイルを適応させるために!importantを指定します。
+@import "_object/_utility/_vertical-align";
+@import "_object/_utility/_border";
+@import "_object/_utility/_clearfix";
+@import "_object/_utility/_display";
+@import "_object/_utility/_float";
+@import "_object/_utility/_font-size";
+@import "_object/_utility/_font-weight";
+@import "_object/_utility/_color";
+@import "_object/_utility/_margin";
+@import "_object/_utility/_padding";
+@import "_object/_utility/_position";
+@import "_object/_utility/_text-align";
+@import "_object/_utility/_text-decoration";
+@import "_object/_utility/_text-indent";
+@import "_object/_utility/_width";
+@import "_object/_utility/_height";
+@import "_object/_utility/_letter-space";
+@import "_object/_utility/_cursor";
+@import "_object/_utility/_bgclr";
+@import "_object/_utility/_line-height";
+
+
+/* -----------------------------------------------------------------
+ Js
+----------------------------------------------------------------- */
+//js用クラスにどうしてもスタイルを適用したい場合
+

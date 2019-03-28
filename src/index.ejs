@@ -1,0 +1,54 @@
+<% const url = 'com' %>
+<% const title = 'タイトルサンプル' %>
+<% const description = 'ディスクリプションサンプルテキスト' %>
+
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title><%- title %></title>
+
+  <meta name="description" content="<%- description %>">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <meta property="og:url" content="<%- url %>/">
+  <meta property="og:title" content="<%- title %>">
+  <meta property="og:description" content="<%- description %>">
+  <meta property="og:site_name" content="<%- title %>">
+  <meta property="og:image" content="<%- url %>/ogp.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<%- title %>">
+  <meta name="twitter:url" content="<%- url %>/">
+  <meta name="twitter:description" content="<%- description %>">
+
+  <link rel="manifest" href="manifest.json">
+
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+<div class="l-wrapper">
+  <%- include('./_ejs/header') %>
+
+  <main class="l-main">
+  </main><!-- /.l-main -->
+
+  <%- include('./_ejs/footer') %>
+</div><!-- /.l-wrapper -->
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"
+  defer></script>
+<script src="/js/libs/plugins.js" defer></script>
+<script src="/js/common/common.js" defer></script>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+/* ==========================================================================
+ float
+========================================================================== */
+.u-fl-l {
+    float: left !important;
+}
+
+.u-fl-r {
+    float: right !important;
+}
+
+.u-fl-n {
+    float: none !important;
+}
+
+@media screen and (max-width: $break-point-sp) {
+	.u-fl-l-sp {
+			float: left !important;
+	}
+
+	.u-fl-r-sp {
+			float: right !important;
+	}
+
+	.u-fl-n-sp {
+			float: none !important;
+	}
+}

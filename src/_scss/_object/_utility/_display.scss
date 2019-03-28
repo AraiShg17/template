@@ -1,0 +1,60 @@
+/* ==========================================================================
+ display
+========================================================================== */
+.u-d-tb {
+    display: table !important;
+}
+
+.u-d-tbc {
+    display: table-cell !important;
+}
+
+.u-d-b {
+    display: block !important;
+}
+
+.u-d-ib {
+    display: inline-block !important;
+}
+
+.u-d-i {
+    display: inline !important;
+}
+
+.u-d-n {
+    display: none !important;
+}
+
+.u-d-f {
+    display: flex !important;
+}
+
+@media screen and (max-width: $break-point-sp) {
+	.u-d-tb-sp {
+			display: table !important;
+	}
+
+	.u-d-tbc-sp {
+			display: table-cell !important;
+	}
+
+	.u-d-b-sp {
+			display: block !important;
+	}
+
+	.u-d-ib-sp {
+			display: inline-block !important;
+	}
+
+	.u-d-i-sp {
+			display: inline !important;
+	}
+
+	.u-d-n-sp {
+			display: none !important;
+	}
+
+	.u-d-f-sp {
+			display: flex !important;
+	}
+}

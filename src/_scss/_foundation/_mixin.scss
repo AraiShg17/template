@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+// ====================================
+// mixin
+// ====================================
+
+//吹き出し用三角
+@mixin arw($pos:left,$posNum:-32px,$width:16px,$height:8px,$color:#000) {
+	content: "";
+	position: absolute;
+	@if $pos == left {
+		left: $posNum;
+		top: 0;
+		bottom: 0;
+		border-color: rgba($color,0) rgba($color,1) rgba($color,0) rgba($color,0);
+	} @else if $pos == right {
+		right: $posNum;
+		top: 0;
+		bottom: 0;
+		border-color: rgba($color,0) rgba($color,0) rgba($color,0) rgba($color,1);
+	} @else if $pos == top {
+		top: $posNum;
+		left: 0;
+		right: 0;
+		border-color: rgba($color,0) rgba($color,0) rgba($color,1) rgba($color,0);
+	} @else if $pos == bottom {
+		bottom: $posNum;
+		left: 0;
+		right: 0;
+		border-color: rgba($color,1) rgba($color,0) rgba($color,0) rgba($color,0);
+	}
+	margin: auto;
+	border-width: $height $width;
+	border-style: solid;
+	width: 0;
+	height: 0;
+}
+
+//タイトル両サイドにスラッシュで強調するやつ
+@mixin slash($pos:left,$posNum:-32px,$width:16px,$bgColor:#000,$deg:15deg) {
+	content: "";
+	position: absolute;
+	@if $pos == left {
+		left: $posNum;
+		top: 0;
+		bottom: 0;
+	} @else if $pos == right {
+		right: $posNum;
+		top: 0;
+		bottom: 0;
+	}
+	transform-origin: center center;
+	transform: rotate($deg);
+	margin: auto;
+	width: $width;
+	height: auto;
+	background-color: $bgColor
+}
