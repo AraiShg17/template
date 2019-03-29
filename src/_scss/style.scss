@@ -1,20 +1,21 @@
+@charset "utf-8";
 /* ==========================================================================
  Foundation
 ========================================================================== */
-@import "_foundation/_mixin";
-@import "_foundation/_variable";
-@import "_foundation/_reset";
-@import "_foundation/_webfont";
-@import "_foundation/_base";
+@import "./_foundation/_mixin.scss";
+@import "./_foundation/_variable.scss";
+@import "./_foundation/_reset.scss";
+@import "./_foundation/_webfont.scss";
+@import "./_foundation/_base.scss";
 
 /* ==========================================================================
  Layout
 ========================================================================== */
-@import "_layout/_wrapper";
-@import "_layout/_header";
-@import "_layout/_nav";
-@import "_layout/_main";
-@import "_layout/_footer";
+@import "./_layout/_wrapper.scss";
+@import "./_layout/_header.scss";
+@import "./_layout/_nav.scss";
+@import "./_layout/_main.scss";
+@import "./_layout/_footer.scss";
 
 /* ==========================================================================
  Object
@@ -24,38 +25,38 @@
  Component
 ----------------------------------------------------------------- */
 //全プロジェクトで共通で使えるスタイル
-@import "_object/_component/_keyframe";
+@import "./_object/_component/_keyframe.scss";
 
 /* -----------------------------------------------------------------
  Project
 ----------------------------------------------------------------- */
 //プロジェクト固有のスタイル
-@import "_object/_project/_title";
+@import "./_object/_project/_title.scss";
 
 /* -----------------------------------------------------------------
  Utility
 ----------------------------------------------------------------- */
 //汎用クラス ほとんどの場合で単一のスタイルを指定 確実にスタイルを適応させるために!importantを指定します。
-@import "_object/_utility/_vertical-align";
-@import "_object/_utility/_border";
-@import "_object/_utility/_clearfix";
-@import "_object/_utility/_display";
-@import "_object/_utility/_float";
-@import "_object/_utility/_font-size";
-@import "_object/_utility/_font-weight";
-@import "_object/_utility/_color";
-@import "_object/_utility/_margin";
-@import "_object/_utility/_padding";
-@import "_object/_utility/_position";
-@import "_object/_utility/_text-align";
-@import "_object/_utility/_text-decoration";
-@import "_object/_utility/_text-indent";
-@import "_object/_utility/_width";
-@import "_object/_utility/_height";
-@import "_object/_utility/_letter-space";
-@import "_object/_utility/_cursor";
-@import "_object/_utility/_bgclr";
-@import "_object/_utility/_line-height";
+@import "./_object/_utility/_vertical-align.scss";
+@import "./_object/_utility/_border.scss";
+@import "./_object/_utility/_clearfix.scss";
+@import "./_object/_utility/_display.scss";
+@import "./_object/_utility/_float.scss";
+@import "./_object/_utility/_font-size.scss";
+@import "./_object/_utility/_font-weight.scss";
+@import "./_object/_utility/_color.scss";
+@import "./_object/_utility/_margin.scss";
+@import "./_object/_utility/_padding.scss";
+@import "./_object/_utility/_position.scss";
+@import "./_object/_utility/_text-align.scss";
+@import "./_object/_utility/_text-decoration.scss";
+@import "./_object/_utility/_text-indent.scss";
+@import "./_object/_utility/_width.scss";
+@import "./_object/_utility/_height.scss";
+@import "./_object/_utility/_letter-space.scss";
+@import "./_object/_utility/_cursor.scss";
+@import "./_object/_utility/_bgclr.scss";
+@import "./_object/_utility/_line-height.scss";
 
 
 /* -----------------------------------------------------------------
