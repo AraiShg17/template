@@ -38,9 +38,9 @@ const getEntriesList = (targetTypes) => {
   return entriesList;
 }
 
-console.log(getEntriesList({ ejs : 'html' }));
-console.log(getEntriesList({ scss : 'css' }));
-console.log(getEntriesList({ js : 'js' }));
+//console.log(getEntriesList({ ejs : 'html' }));
+//console.log(getEntriesList({ scss : 'css' }));
+//console.log(getEntriesList({ js : 'js' }));
 
 
 
@@ -57,7 +57,7 @@ const app = (env, argv) => {
       entry: getEntriesList({ scss : 'css' }),
       output: {
         path: `${__dirname}/public/`,
-        filename: '[name].css'
+        filename: './../cssCompile/[name].js'
       },
       module: {
         rules: [
@@ -103,7 +103,7 @@ const app = (env, argv) => {
       devtool: sourceMap,
       plugins: [
         new MiniCssExtractPlugin({
-          filename: '/[name].css'
+          filename: './[name].css'
         })
       ]
     },
@@ -204,6 +204,3 @@ const app = (env, argv) => {
 
 
 module.exports = app;
-
-
-// todo CSSのコンパイルがうまくいってない
