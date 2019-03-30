@@ -83,9 +83,13 @@ const app = (env, argv) => {
                   ident: 'postcss',
                   plugins: [
                     require("autoprefixer")({
-                      browsers: [ 'last 2 versions' ],
+                      browsers: [
+                        'last 2 versions',
+                        "ie >= 11"
+                      ],
                       grid: true
-                    })
+                    }),
+                    require("postcss-cssnext")
                   ]
                 }
               },
