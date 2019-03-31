@@ -4,6 +4,7 @@ const globule = require('globule');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlBeautifyPlugin = require('html-beautify-webpack-plugin');
 
 
 const targetTypes = null;
@@ -159,8 +160,9 @@ const app = (env, argv) => {
       plugins: [
         new HtmlWebpackPlugin({
           filename: 'index.html',
-          template: 'src/index.ejs'
+          template: 'src/index.ejs',
         }),
+        new HtmlBeautifyPlugin(),
         new CopyWebpackPlugin(
           //コンパイルしないものをコピー移動
           [
@@ -196,10 +198,32 @@ const app = (env, argv) => {
 
   //ejsファイルセット
   for(const [ targetName, srcName ] of Object.entries(getEntriesList({ ejs : 'html' }))) {
-    settings[2].plugins.push(new HtmlWebpackPlugin({
-      filename : targetName,
-      template : srcName
-    }));
+    settings[2].plugins.push(
+      new HtmlWebpackPlugin({
+        filename : targetName,
+        template : srcName,
+        minify: {
+          collapseWhitespace: true,
+          removeComments: true,
+          removeRedundantAttributes: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          useShortDoctype: true
+        },
+      }),
+      new HtmlBeautifyPlugin({
+        config: {
+          html: {
+            end_with_newline: true,
+            indent_size: 2,
+            indent_with_tabs: true,
+            indent_inner_html: true,
+            preserve_newlines: true,
+            unformatted: ['p', 'i', 'b', 'span']
+          }
+        }
+      })
+    );
   }
 
   return settings;
