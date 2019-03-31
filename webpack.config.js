@@ -158,11 +158,6 @@ const app = (env, argv) => {
         ]
       },
       plugins: [
-        new HtmlWebpackPlugin({
-          filename: 'index.html',
-          template: 'src/index.ejs',
-        }),
-        new HtmlBeautifyPlugin(),
         new CopyWebpackPlugin(
           //コンパイルしないものをコピー移動
           [
