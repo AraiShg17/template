@@ -205,21 +205,23 @@ const app = (env, argv) => {
           removeStyleLinkTypeAttributes: true,
           useShortDoctype: true
         },
-      }),
-      new HtmlBeautifyPlugin({
-        config: {
-          html: {
-            end_with_newline: true,
-            indent_size: 2,
-            indent_with_tabs: true,
-            indent_inner_html: true,
-            preserve_newlines: true,
-            unformatted: ['p', 'i', 'b', 'span']
-          }
-        }
       })
     );
   }
+  settings[2].plugins.push(
+    new HtmlBeautifyPlugin({
+      config: {
+        html: {
+          end_with_newline: true,
+          indent_size: 2,
+          indent_with_tabs: true,
+          indent_inner_html: true,
+          preserve_newlines: true,
+          unformatted: ['p', 'i', 'b', 'span']
+        }
+      }
+    })
+  );
 
   return settings;
 }
