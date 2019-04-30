@@ -6,6 +6,11 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlBeautifyPlugin = require('html-beautify-webpack-plugin');
 
+const ImageminPlugin = require("imagemin-webpack");
+const imageminGifsicle = require("imagemin-gifsicle");
+const imageminMozjpeg = require("imagemin-mozjpeg");
+const imageminPngquant = require("imagemin-pngquant");
+const imageminSvgo = require("imagemin-svgo");
 
 const targetTypes = null;
 
@@ -186,7 +191,30 @@ const app = (env, argv) => {
             },
           ],
           { context: 'src/js/libs' }
-        )
+        ),
+        new ImageminPlugin({
+          bail: false, // Ignore errors on corrupted images
+          cache: true,
+          maxConcurrency: 3,
+          name: "[path][name].[ext]",
+          imageminOptions: {
+            plugins: [
+              imageminGifsicle({
+                interlaced: true
+              }),
+              imageminMozjpeg({
+                progressive: true
+              }),
+              imageminPngquant({
+                optimizationLevel: 5
+              }),
+              imageminSvgo({
+                removeViewBox: true
+              })
+            ]
+          },
+          loader: false
+        })
       ]
     }
   ];
