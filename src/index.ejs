@@ -44,6 +44,8 @@
   <%- include('./_ejs/header') %>
 
   <main class="l-main">
+    /* todo 画像のパスがルート総体じゃないとバグる */
+    <img src="/images/sample.png" srcset="/images/sample.png 1x, /images/sample@2x.png 2x" alt="">
   </main><!-- /.l-main -->
 
   <%- include('./_ejs/footer') %>

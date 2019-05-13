@@ -132,7 +132,7 @@ const app = (env, argv) => {
             exclude: /node_modules/,
             loader: 'babel-loader',
             query: {
-              presets: ['@babel/preset-env'],
+              presets: ['@babel/preset-env']
             },
           },
         ]
